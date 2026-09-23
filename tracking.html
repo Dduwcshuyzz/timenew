@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Theo dõi chuyến · LimoGo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../styles/mobile-app.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <div class="mobile-frame">
+        <header class="top-appbar">
+          <a href="booking.html" class="icon-pill" aria-label="Quay lại">‹</a>
+          <div class="brand-mini"><span class="logo">L</span><span>LimoGo</span></div>
+          <button class="icon-pill" type="button" aria-label="Chia sẻ">↗</button>
+        </header>
+
+        <section class="tracking-map" aria-label="Bản đồ theo dõi vị trí xe">
+          <div class="map-grid"></div>
+          <div class="map-road road-one"></div>
+          <div class="map-road road-two"></div>
+          <div class="map-road road-three"></div>
+          <div class="map-route"><span class="map-pin pickup-pin">●</span><span class="map-pin car-pin" id="carPin">🚙</span><span class="map-pin destination-pin">●</span></div>
+          <div class="map-label pickup-label">Điểm đón</div>
+          <div class="map-label destination-label">Điểm đến</div>
+          <div class="map-location">⌾</div>
+          <div class="live-map-badge"><span class="live-dot"></span> CẬP NHẬT TRỰC TIẾP</div>
+          <div class="customer-location-label" id="customerLocationLabel">● Vị trí khách hàng</div>
+        </section>
+
+        <section class="tracking-status-card">
+          <div class="tracking-status-top">
+            <div><span class="screen-kicker">CHUYẾN ĐANG ĐẾN</span><h1 id="trackingTitle">Tài xế đang đến</h1></div>
+            <span class="eta-badge" id="trackingEta">3 phút</span>
+          </div>
+          <p id="trackingRoute" class="tracking-route">Đang tải thông tin chuyến...</p>
+          <p id="lastUpdated" class="last-updated">Vừa cập nhật</p>
+          <div class="progress-track"><span id="trackingProgress"></span></div>
+          <div class="progress-labels"><span>Đã nhận chuyến</span><span>Đang đến đón</span><span>Đã đón bạn</span></div>
+        </section>
+
+        <div class="section-title"><h3>Tài xế của bạn</h3><span class="rating-label">★ 4.9</span></div>
+        <section class="panel-card driver-card">
+          <div class="driver-avatar">NT</div>
+          <div class="driver-info"><strong>Nguyễn Thành Nam</strong><small>Đối tác tài xế · 2.184 chuyến</small><span class="car-number">VINFAST VF e34 · 51H-123.45</span><span class="driver-badges">✓ Đã xác minh · ⚡ Phản hồi nhanh</span></div>
+          <div class="driver-actions"><button class="contact-button" type="button" aria-label="Gọi tài xế">☎</button><button class="contact-button" type="button" aria-label="Nhắn tin tài xế">✉</button></div>
+        </section>
+
+        <section class="panel-card driver-detail">
+          <div class="detail-heading"><strong>Thông tin chuyến đi</strong><span id="rideId">LMG-—</span></div>
+          <div class="detail-grid">
+            <div><span>Khoảng cách</span><strong id="tripDistance">2,4 km</strong></div>
+            <div><span>Dự kiến đến</span><strong id="arrivalTime">--:--</strong></div>
+            <div><span>Loại xe</span><strong id="summaryVehicle">Xe điện</strong></div>
+            <div><span>Trạng thái</span><strong class="online-text">● Trực tuyến</strong></div>
+          </div>
+        </section>
+
+        <section class="panel-card trip-summary">
+          <div class="summary-row"><span>Điểm đón</span><strong id="summaryFrom">Vị trí hiện tại</strong></div>
+          <div class="summary-row"><span>Điểm đến</span><strong id="summaryTo">—</strong></div>
+          <div class="summary-row"><span>Thanh toán</span><strong id="summaryPayment">Tiền mặt</strong></div>
+        </section>
+
+        <button class="secondary-button cancel-button" type="button" id="cancelTrip">Hủy chuyến</button>
+        <section class="success-card" id="successCard" hidden>
+          <div class="success-check">✓</div>
+          <span class="screen-kicker">CHUYẾN ĐI SẴN SÀNG</span>
+          <h2>Tài xế đã đến!</h2>
+          <p>Hãy kiểm tra biển số xe trước khi lên xe. Chúc bạn có một hành trình vui vẻ.</p>
+          <button class="primary-button" type="button" id="finishTrip">Tôi đã lên xe</button>
+        </section>
+      </div>
+    </div>
+
+    <nav class="footer-nav" aria-label="Điều hướng ứng dụng">
+      <a href="../index.html" class="nav-item"><span class="nav-icon">⌂</span><span>Trang chủ</span></a>
+      <a href="booking.html" class="nav-item active"><span class="nav-icon">⌁</span><span>Đặt xe</span></a>
+      <a href="account.html" class="nav-item"><span class="nav-icon">♙</span><span>Tài khoản</span></a>
+      <a href="auth.html" class="nav-item"><span class="nav-icon">◌</span><span>Đăng nhập</span></a>
+    </nav>
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+    <script src="../js/supabase-config.js"></script>
+    <script src="../js/supabase-client.js"></script>
+    <script src="../js/location-flow.js"></script>
+    <script src="../js/tracking-flow.js"></script>
+  </body>
+</html>

@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đặt xe · LimoGo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../styles/mobile-app.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <div class="mobile-frame">
+        <header class="top-appbar">
+          <div class="brand-mini">
+            <span class="logo">L</span>
+            <span>LimoGo</span>
+          </div>
+          <div class="top-actions">
+            <button class="icon-pill" type="button">🔔</button>
+            <div class="avatar-pill">NL</div>
+          </div>
+        </header>
+
+        <div class="screen-header">
+          <span class="screen-kicker">ĐẶT XE</span>
+          <h1>Đi đâu hôm nay?</h1>
+        </div>
+
+        <section class="hero-card">
+          <div class="hero-card-top">
+            <h3>Khởi hành</h3>
+            <span class="badge-chip">24/7</span>
+          </div>
+          <div class="hero-stats">
+            <div class="stat-box"><strong>4.9</strong><small>Đánh giá</small></div>
+            <div class="stat-box"><strong>3m</strong><small>Chờ xe</small></div>
+            <div class="stat-box"><strong>100%</strong><small>Xe điện</small></div>
+          </div>
+        </section>
+
+        <section class="form-card">
+          <div class="location-block">
+            <span class="location-dot"></span>
+            <span class="location-label">Điểm đón</span>
+            <input id="pickupAddress" value="Đang xác định vị trí..." readonly />
+            <button class="location-action" type="button" id="locateCustomer" aria-label="Lấy vị trí hiện tại">⌾</button>
+          </div>
+          <div class="location-block destination">
+            <span class="location-dot"></span>
+            <span class="location-label">Điểm đến</span>
+            <input id="destinationAddress" placeholder="Nhập địa chỉ muốn đến" value="Landmark 81" />
+          </div>
+          <div class="route-actions">
+            <button class="soft-button" type="button">+ Thêm điểm dừng</button>
+            <button class="soft-button" type="button">Lưu địa điểm</button>
+          </div>
+          <button class="primary-button" type="button" id="confirmBooking">Tìm chuyến</button>
+        </section>
+
+        <div class="section-title">
+          <h3>Điểm phổ biến</h3>
+        </div>
+
+        <section class="panel-card">
+          <div class="route-pill-row">
+            <button class="route-pill" type="button">✈ Sân bay</button>
+            <button class="route-pill" type="button">🏙 Landmark 81</button>
+            <button class="route-pill" type="button">🛍 Huệ</button>
+            <button class="route-pill" type="button">🌿 Hồ Con Rùa</button>
+          </div>
+        </section>
+
+        <div class="section-title">
+          <h3>Chọn xe</h3>
+        </div>
+
+        <section class="panel-card">
+          <div class="vehicle-list">
+            <div class="vehicle-option active">
+              <div class="vehicle-icon">🚙</div>
+              <div class="vehicle-main">
+                <strong>Xe điện tiêu chuẩn</strong>
+                <small>4 chỗ · 3 phút</small>
+              </div>
+              <div class="vehicle-price">45.000đ</div>
+            </div>
+            <div class="vehicle-option">
+              <div class="vehicle-icon">🚘</div>
+              <div class="vehicle-main">
+                <strong>Xe cao cấp</strong>
+                <small>4 chỗ · 4 phút</small>
+              </div>
+              <div class="vehicle-price">55.000đ</div>
+            </div>
+            <div class="vehicle-option">
+              <div class="vehicle-icon">🚐</div>
+              <div class="vehicle-main">
+                <strong>Xe 7 chỗ</strong>
+                <small>7 chỗ · 6 phút</small>
+              </div>
+              <div class="vehicle-price">68.000đ</div>
+            </div>
+          </div>
+        </section>
+
+        <div class="section-title">
+          <h3>Thanh toán</h3>
+        </div>
+
+        <section class="panel-card">
+          <div class="payment-grid">
+            <div class="payment-box active">💵 Tiền mặt</div>
+            <div class="payment-box">💳 Thẻ</div>
+            <div class="payment-box">◈ Ví</div>
+            <div class="payment-box">M MoMo</div>
+          </div>
+          <div class="summary-list" style="margin-top: 12px;">
+            <div class="summary-row"><span>Phí phục vụ</span><span>10.000đ</span></div>
+            <div class="summary-row"><span>Giảm giá</span><span>-30.000đ</span></div>
+            <div class="summary-row"><span>Tổng</span><strong>25.000đ</strong></div>
+          </div>
+        </section>
+
+        <p class="inline-text location-status" id="locationStatus" style="margin: 0 18px 8px;">Đang xin quyền truy cập vị trí...</p>
+        <p class="inline-text" id="bookingStatus" style="margin: 0 18px 18px;">Chưa có chuyến nào được xác nhận.</p>
+      </div>
+    </div>
+
+    <nav class="footer-nav" aria-label="Điều hướng ứng dụng">
+      <a href="../index.html" class="nav-item"><span class="nav-icon">⌂</span><span>Trang chủ</span></a>
+      <a href="booking.html" class="nav-item active"><span class="nav-icon">⌁</span><span>Đặt xe</span></a>
+      <a href="account.html" class="nav-item"><span class="nav-icon">♙</span><span>Tài khoản</span></a>
+      <a href="auth.html" class="nav-item"><span class="nav-icon">◌</span><span>Đăng nhập</span></a>
+    </nav>
+
+    <script src="../js/location-flow.js"></script>
+    <script src="../js/ride-flow.js"></script>
+  </body>
+</html>
