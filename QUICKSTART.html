@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quick Start — LimoGo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body { font: 16px "Be Vietnam Pro", sans-serif; background: #f7f7f7; color: #333; }
+      .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+      header { background: linear-gradient(135deg, #1ba969, #159d61); color: white; padding: 60px 20px; text-align: center; margin: -40px -20px 40px -20px; }
+      header h1 { font-size: 48px; margin-bottom: 10px; }
+      header p { font-size: 18px; opacity: 0.9; }
+      .step { background: white; border-radius: 13px; padding: 30px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+      .step h2 { color: #1ba969; margin-bottom: 15px; font-size: 24px; }
+      .step p { line-height: 1.6; margin-bottom: 15px; color: #666; }
+      .step ul { margin-left: 20px; }
+      .step li { margin-bottom: 10px; line-height: 1.6; }
+      .step code { background: #f0f0f0; padding: 2px 6px; border-radius: 4px; font: 13px monospace; }
+      .step .code-block { background: #1e1e1e; color: #d4d4d4; padding: 15px; border-radius: 8px; overflow-x: auto; margin: 15px 0; font: 12px monospace; }
+      .step .code-block .comment { color: #6a9955; }
+      .step .code-block .string { color: #ce9178; }
+      .step .code-block .keyword { color: #569cd6; }
+      .links { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 20px; }
+      .links a { display: block; padding: 15px; background: #f0f0f0; border-radius: 8px; text-decoration: none; color: #1ba969; font-weight: 600; text-align: center; border: 2px solid transparent; transition: all 0.3s; }
+      .links a:hover { background: #e8f5ed; border-color: #1ba969; }
+      .warning { background: #fff3cd; border-left: 4px solid #ffc107; padding: 15px; border-radius: 8px; margin: 15px 0; }
+      .warning strong { color: #856404; }
+      .success { background: #d4edda; border-left: 4px solid #28a745; padding: 15px; border-radius: 8px; margin: 15px 0; }
+      .success strong { color: #155724; }
+      .footer { text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid #e5e5e5; color: #666; }
+      .checklist { list-style: none; }
+      .checklist li { padding: 8px 0; padding-left: 30px; position: relative; }
+      .checklist li::before { content: "☐"; position: absolute; left: 0; color: #1ba969; font-weight: bold; }
+      .checklist li.done::before { content: "☑"; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>🚗 LimoGo - Quick Start</h1>
+      <p>Hướng dẫn bắt đầu nhanh với Supabase</p>
+    </header>
+
+    <div class="container">
+      <div class="step">
+        <h2>📋 Bước 1: Tạo tài khoản Supabase</h2>
+        <p>Trước tiên, bạn cần một tài khoản Supabase để lưu dữ liệu.</p>
+        <ul>
+          <li>Truy cập <strong>https://supabase.com</strong></li>
+          <li>Click <strong>"Sign Up"</strong></li>
+          <li>Chọn cách đăng ký (GitHub, Google hoặc Email)</li>
+          <li>Xác thực email nếu cần</li>
+        </ul>
+        <div class="success">
+          <strong>✓ Tip:</strong> Dùng Gmail hoặc GitHub sẽ nhanh nhất
+        </div>
+      </div>
+
+      <div class="step">
+        <h2>🆕 Bước 2: Tạo dự án Supabase</h2>
+        <p>Sau khi đăng nhập, tạo một dự án mới.</p>
+        <ul>
+          <li>Click <strong>"New project"</strong></li>
+          <li>Điền tên dự án: <code>limogo</code> (hoặc tên khác)</li>
+          <li>Nhập mật khẩu cơ sở dữ liệu (ghi nhớ mật khẩu này)</li>
+          <li>Chọn Region: <strong>Singapore</strong> (gần VN nhất)</li>
+          <li>Click <strong>"Create new project"</strong></li>
+          <li>⏳ Chờ 5-10 phút cho đến khi hoàn thành</li>
+        </ul>
+        <div class="warning">
+          <strong>⚠️ Quan trọng:</strong> Lưu mật khẩu database ở nơi an toàn!
+        </div>
+      </div>
+
+      <div class="step">
+        <h2>🔑 Bước 3: Lấy API Keys</h2>
+        <p>Lấy Project URL và Anon Public Key từ Supabase.</p>
+        <ul>
+          <li>Trong Supabase Dashboard, click ⚙️ <strong>"Project Settings"</strong> (góc dưới trái)</li>
+          <li>Click tab <strong>"API"</strong></li>
+          <li>Sao chép <strong>"Project URL"</strong>
+            <ul>
+              <li>Trông như: <code>https://xxxxx.supabase.co</code></li>
+            </ul>
+          </li>
+          <li>Sao chép <strong>"Anon Public Key"</strong>
+            <ul>
+              <li>Trông như: <code>eyJhbGci...</code> (rất dài)</li>
+            </ul>
+          </li>
+        </ul>
+        <div class="warning">
+          <strong>⚠️ Cảnh báo bảo mật:</strong> 
+          <ul>
+            <li>✅ Dùng được: Anon Public Key (safe cho frontend)</li>
+            <li>❌ Không dùng: Service Role Key (chỉ backend)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="step">
+        <h2>⚙️ Bước 4: Cập nhật file cấu hình</h2>
+        <p>Điền API keys vào file <code>js/supabase-config.js</code></p>
+        <ol>
+          <li>Mở file <code>js/supabase-config.js</code> bằng editor (VS Code, Notepad, v.v.)</li>
+          <li>Tìm dòng:
+            <div class="code-block">
+              <span class="keyword">export const</span> SUPABASE_URL = <span class="string">"https://apbkhhmdofljvitwkvcf.supabase.co"</span>;
+            </div>
+          </li>
+          <li>Thay thế bằng Project URL của bạn</li>
+          <li>Tìm dòng:
+            <div class="code-block">
+              <span class="keyword">export const</span> SUPABASE_ANON_KEY = <span class="string">"eyJhbGc..."</span>;
+            </div>
+          </li>
+          <li>Thay thế bằng Anon Public Key của bạn</li>
+          <li>Lưu file (Ctrl+S)</li>
+        </ol>
+        <div class="success">
+          <strong>✓ Ví dụ:</strong>
+          <div class="code-block">
+export const SUPABASE_URL = <span class="string">"https://your-project.supabase.co"</span>;
+export const SUPABASE_ANON_KEY = <span class="string">"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."</span>;
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <h2>💾 Bước 5: Chạy SQL Schema</h2>
+        <p>Tạo bảng database cần thiết.</p>
+        <ul>
+          <li>Trong Supabase Dashboard, click <strong>"SQL Editor"</strong> (bên trái)</li>
+          <li>Click <strong>"New Query"</strong></li>
+          <li>Mở file <code>supabase/schema.sql</code> từ thư mục dự án</li>
+          <li>Copy toàn bộ nội dung (Ctrl+A → Ctrl+C)</li>
+          <li>Paste vào SQL Editor (Ctrl+V)</li>
+          <li>Click nút <strong>"Run"</strong> (hoặc Ctrl+Enter)</li>
+          <li>⏳ Chờ cho đến khi thấy <strong>"Command completed successfully"</strong></li>
+        </ul>
+        <div class="success">
+          <strong>✓ Xác thực:</strong> Click "Table Editor" → Bạn sẽ thấy các bảng mới:
+          <ul>
+            <li>profiles</li>
+            <li>drivers</li>
+            <li>rides</li>
+            <li>payments</li>
+            <li>promo_codes</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="step">
+        <h2>🚀 Bước 6: Chạy ứng dụng</h2>
+        <p>Khởi động server local để chạy LimoGo.</p>
+        <p><strong>Cách 1: Dùng Python</strong> (Dễ nhất)</p>
+        <div class="code-block">
+cd /đường/dẫn/tới/timenew
+python -m http.server 8000
+        </div>
+        <p><strong>Cách 2: Dùng Node.js</strong></p>
+        <div class="code-block">
+cd /đường/dẫn/tới/timenew
+npx http-server -p 8000
+        </div>
+        <p><strong>Cách 3: VS Code Live Server</strong></p>
+        <ul>
+          <li>Cài extension "Live Server"</li>
+          <li>Chuột phải vào <code>index.html</code></li>
+          <li>Chọn "Open with Live Server"</li>
+        </ul>
+        <div class="success">
+          <strong>✓ Khi chạy thành công:</strong> Mở trình duyệt → <code>http://localhost:8000</code>
+        </div>
+      </div>
+
+      <div class="step">
+        <h2>✅ Bước 7: Kiểm tra kết nối</h2>
+        <p>Đảm bảo Supabase kết nối đúng.</p>
+        <ul>
+          <li>Mở Developer Console (F12 → Console tab)</li>
+          <li>Gõ lệnh:
+            <div class="code-block">
+window.limoGoSupabase.auth.getSession()
+            </div>
+          </li>
+          <li>Nếu không có lỗi = Kết nối OK ✓</li>
+        </ul>
+      </div>
+
+      <div class="step">
+        <h2>📝 Bước 8: Thử chức năng</h2>
+        <p>Kiểm tra các tính năng chính.</p>
+        <ul class="checklist">
+          <li>Trang chủ hiển thị bình thường</li>
+          <li>Click "Đăng nhập" → Hiển thị modal</li>
+          <li>Đăng ký tài khoản mới (Email + Mật khẩu)</li>
+          <li>Đặt xe → Chọn địa điểm → Xác nhận</li>
+          <li>Xem "Ví" → Hiển thị số dư thật</li>
+          <li>Xem "Lịch sử" → Thấy chuyến vừa đặt</li>
+          <li>Xem "Tài khoản" → Hiển thị thông tin đúng</li>
+        </ul>
+        <div class="success">
+          <strong>✓ Nếu tất cả OK = LimoGo đã sẵn sàng!</strong>
+        </div>
+      </div>
+
+      <div class="step">
+        <h2>📚 Tài liệu thêm</h2>
+        <p>Đọc thêm để hiểu rõ hơn.</p>
+        <div class="links">
+          <a href="../README.md" target="_blank">📖 README.md</a>
+          <a href="../SUPABASE_SETUP.md" target="_blank">🔧 SUPABASE_SETUP.md</a>
+          <a href="../CHANGELOG.md" target="_blank">📝 CHANGELOG.md</a>
+          <a href="../index.html">🎮 Chơi ngay</a>
+        </div>
+      </div>
+
+      <div class="step" style="background: #e8f5ed; border-left: 4px solid #1ba969;">
+        <h2>🎉 Hoàn tất!</h2>
+        <p>Bạn đã cấu hình thành công LimoGo với Supabase!</p>
+        <p>Bây giờ bạn có thể:</p>
+        <ul>
+          <li>✅ Đặt xe từ web</li>
+          <li>✅ Lưu dữ liệu trong database</li>
+          <li>✅ Đăng ký/Đăng nhập tài khoản</li>
+          <li>✅ Xem lịch sử chuyến</li>
+          <li>✅ Quản lý ví và điểm</li>
+          <li>✅ Được thông báo realtime</li>
+        </ul>
+        <p style="margin-top: 20px;">
+          <a href="../index.html" style="display: inline-block; background: #1ba969; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600;">🚗 Mở LimoGo ngay</a>
+        </p>
+      </div>
+
+      <div class="footer">
+        <p>💡 Gặp vấn đề? Xem phần "Troubleshooting" trong <strong>SUPABASE_SETUP.md</strong></p>
+        <p style="margin-top: 10px; font-size: 14px; color: #999;">LimoGo © 2024 · Made with ❤️ for Green Transportation</p>
+      </div>
+    </div>
+  </body>
+</html>

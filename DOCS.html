@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LimoGo - Documentation Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body { font: 16px "Be Vietnam Pro", sans-serif; background: linear-gradient(135deg, #f7f7f7, #f0f0f0); color: #333; min-height: 100vh; }
+      .container { max-width: 1200px; margin: 0 auto; padding: 60px 20px; }
+      header { text-align: center; margin-bottom: 60px; }
+      header h1 { font-size: 48px; color: #1ba969; margin-bottom: 10px; }
+      header p { font-size: 18px; color: #666; margin-bottom: 5px; }
+      header .version { display: inline-block; background: #e8f5ed; color: #1ba969; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; margin-top: 10px; }
+      
+      .docs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-bottom: 40px; }
+      .doc-card { background: white; border-radius: 13px; padding: 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: all 0.3s; border-left: 4px solid #ddd; }
+      .doc-card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.12); border-left-color: #1ba969; }
+      .doc-card.primary { border-left-color: #1ba969; background: linear-gradient(135deg, #f0fdf7, #f8feff); }
+      .doc-card h3 { font-size: 18px; margin-bottom: 10px; color: #1ba969; display: flex; align-items: center; gap: 10px; }
+      .doc-card p { font-size: 14px; line-height: 1.6; color: #666; margin-bottom: 15px; }
+      .doc-card a { display: inline-block; color: #1ba969; text-decoration: none; font-weight: 600; padding: 8px 12px; background: #e8f5ed; border-radius: 6px; transition: all 0.3s; }
+      .doc-card a:hover { background: #1ba969; color: white; }
+      .doc-card .icon { font-size: 24px; }
+      
+      .section-title { font-size: 24px; color: #333; margin: 40px 0 20px 0; font-weight: 700; border-bottom: 3px solid #1ba969; padding-bottom: 10px; }
+      
+      .quick-links { background: white; border-radius: 13px; padding: 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); margin-bottom: 40px; }
+      .quick-links h3 { font-size: 18px; margin-bottom: 15px; color: #1ba969; }
+      .link-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; }
+      .link-button { display: block; padding: 12px 16px; background: #f7f7f7; border-radius: 8px; text-decoration: none; color: #1ba969; font-weight: 600; text-align: center; border: 2px solid transparent; transition: all 0.3s; }
+      .link-button:hover { background: #1ba969; color: white; border-color: #1ba969; }
+      
+      .features { background: white; border-radius: 13px; padding: 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); margin-bottom: 40px; }
+      .features h3 { font-size: 18px; margin-bottom: 15px; color: #1ba969; }
+      .feature-list { columns: 2; column-gap: 30px; }
+      .feature-list li { margin-bottom: 10px; list-style: none; padding-left: 25px; position: relative; }
+      .feature-list li::before { content: "✓"; position: absolute; left: 0; color: #1ba969; font-weight: bold; }
+      
+      .footer { text-align: center; color: #999; font-size: 14px; border-top: 1px solid #e5e5e5; padding-top: 20px; margin-top: 40px; }
+      .footer a { color: #1ba969; text-decoration: none; }
+      
+      .status-badge { display: inline-block; background: #d4edda; color: #155724; padding: 6px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; margin-bottom: 10px; }
+      
+      .start-button { display: inline-block; background: #1ba969; color: white; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 16px; transition: all 0.3s; margin-top: 20px; }
+      .start-button:hover { background: #159d61; transform: scale(1.05); }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>🚗 LimoGo</h1>
+        <p>Ứng dụng đặt xe xanh, sống xanh</p>
+        <div class="version">v2.0.0 • Production Ready</div>
+        <div class="status-badge">✓ Sẵn sàng sử dụng</div>
+        <p style="margin-top: 20px; color: #666; font-size: 14px;">Hệ thống quản lý tài liệu và hướng dẫn toàn bộ dự án</p>
+      </header>
+
+      <!-- Quick Start -->
+      <div class="quick-links">
+        <h3>⚡ Bắt đầu nhanh (Recommended)</h3>
+        <p style="font-size: 14px; color: #666; margin-bottom: 15px;">Chọn một trong các tùy chọn dưới đây để bắt đầu:</p>
+        <div class="link-grid">
+          <a href="QUICKSTART.html" class="link-button">📋 8-Bước Quick Start</a>
+          <a href="README.md" class="link-button">📖 README Đầy đủ</a>
+          <a href="index.html" class="link-button">🎮 Chơi Ngay</a>
+          <a href="SUPABASE_SETUP.md" class="link-button">🔧 Cấu hình Supabase</a>
+        </div>
+      </div>
+
+      <!-- Main Documentation -->
+      <h2 class="section-title">📚 Tài liệu chính</h2>
+      <div class="docs-grid">
+        <div class="doc-card primary">
+          <h3><span class="icon">🎯</span> Quick Start</h3>
+          <p>Hướng dẫn 8 bước nhanh để thiết lập LimoGo trong 30 phút. Tối ưu cho người mới bắt đầu.</p>
+          <a href="QUICKSTART.html">Xem ngay →</a>
+        </div>
+
+        <div class="doc-card primary">
+          <h3><span class="icon">📖</span> README</h3>
+          <p>Tài liệu toàn diện về LimoGo: tính năng, cấu trúc, cách sử dụng, troubleshooting.</p>
+          <a href="README.md">Đọc tiếp →</a>
+        </div>
+
+        <div class="doc-card">
+          <h3><span class="icon">🔧</span> Supabase Setup</h3>
+          <p>Hướng dẫn chi tiết cấu hình Supabase: tạo project, lấy API keys, chạy SQL schema.</p>
+          <a href="SUPABASE_SETUP.md">Hướng dẫn →</a>
+        </div>
+
+        <div class="doc-card">
+          <h3><span class="icon">🚀</span> Deployment</h3>
+          <p>Hướng dẫn triển khai lên production: Netlify, Vercel, server riêng. Checklist hoàn chỉnh.</p>
+          <a href="DEPLOYMENT.md">Triển khai →</a>
+        </div>
+
+        <div class="doc-card">
+          <h3><span class="icon">💡</span> Development</h3>
+          <p>Best practices, debugging tips, code style guide, testing checklist cho developers.</p>
+          <a href="DEVELOPMENT.md">Phát triển →</a>
+        </div>
+
+        <div class="doc-card">
+          <h3><span class="icon">📝</span> Changelog</h3>
+          <p>Lịch sử toàn bộ cập nhật từ v1.0 đến v2.0, các bug fix, và roadmap tương lai.</p>
+          <a href="CHANGELOG.md">Xem lịch sử →</a>
+        </div>
+
+        <div class="doc-card">
+          <h3><span class="icon">📊</span> Project Summary</h3>
+          <p>Tổng quan về dự án: thống kê code, technology stack, metrics, và milestone đã đạt.</p>
+          <a href="PROJECT_SUMMARY.md">Chi tiết →</a>
+        </div>
+
+        <div class="doc-card">
+          <h3><span class="icon">🎮</span> Live App</h3>
+          <p>Truy cập ứng dụng LimoGo live. Đăng ký tài khoản test và thử toàn bộ tính năng.</p>
+          <a href="index.html">Mở ứng dụng →</a>
+        </div>
+      </div>
+
+      <!-- Features -->
+      <h2 class="section-title">✨ Tính năng chính</h2>
+      <div class="features">
+        <ul class="feature-list">
+          <li><strong>Booking:</strong> Đặt xe ngay hoặc đặt lịch với pickup/destination</li>
+          <li><strong>Maps:</strong> Hiển thị bản đồ Leaflet + OpenStreetMap với route</li>
+          <li><strong>Tracking:</strong> Theo dõi tài xế realtime trên bản đồ</li>
+          <li><strong>Payment:</strong> 4 phương thức: Tiền mặt, Ví, Thẻ, MoMo</li>
+          <li><strong>Auth:</strong> Đăng ký/Đăng nhập với Supabase</li>
+          <li><strong>History:</strong> Xem lịch sử chuyến đầy đủ</li>
+          <li><strong>Wallet:</strong> Quản lý ví, điểm thưởng, membership</li>
+          <li><strong>Chat:</strong> Nhắn tin với tài xế (UI ready)</li>
+          <li><strong>Rating:</strong> Đánh giá & review chuyến</li>
+          <li><strong>Promo:</strong> Áp dụng mã giảm giá (XANH30 demo)</li>
+          <li><strong>Realtime:</strong> Cập nhật status chuyến tức thời</li>
+          <li><strong>Responsive:</strong> Mobile-first, hoạt động trên tất cả device</li>
+        </ul>
+      </div>
+
+      <!-- File Structure -->
+      <h2 class="section-title">📁 Cấu trúc thư mục</h2>
+      <div class="docs-grid">
+        <div class="doc-card">
+          <h3><span class="icon">📄</span> HTML Files</h3>
+          <p><strong>index.html</strong> - Trang chính<br>
+             <strong>pages/</strong> - 5 pages: wallet, history, account, support, ride-detail</p>
+          <a href="index.html">Mở trang →</a>
+        </div>
+
+        <div class="doc-card">
+          <h3><span class="icon">🎨</span> Styles</h3>
+          <p><strong>style.css</strong> - CSS chính (1000+ lines)<br>
+             <strong>styles/pages.css</strong> - CSS cho pages</p>
+          <a href="style.css">Xem CSS →</a>
+        </div>
+
+        <div class="doc-card">
+          <h3><span class="icon">⚙️</span> JavaScript</h3>
+          <p><strong>script.js</strong> - Logic chính<br>
+             <strong>js/</strong> - 6 modules: config, client, pages, realtime, payment, rating</p>
+          <a href="script.js">Xem JS →</a>
+        </div>
+
+        <div class="doc-card">
+          <h3><span class="icon">💾</span> Database</h3>
+          <p><strong>supabase/schema.sql</strong> - Database schema<br>
+             Tạo 5 tables + RLS policies + triggers</p>
+          <a href="supabase/schema.sql">Xem SQL →</a>
+        </div>
+      </div>
+
+      <!-- Documentation Map -->
+      <h2 class="section-title">🗺️ Bản đồ tài liệu</h2>
+      <div style="background: white; border-radius: 13px; padding: 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); font-size: 14px; line-height: 2;">
+        <strong>Người mới bắt đầu?</strong><br>
+        1️⃣ Đọc: <strong>README.md</strong><br>
+        2️⃣ Làm theo: <strong>QUICKSTART.html</strong> hoặc <strong>SUPABASE_SETUP.md</strong><br>
+        3️⃣ Chơi thử: <strong>index.html</strong><br>
+        <br>
+        
+        <strong>Developer?</strong><br>
+        1️⃣ Xem: <strong>DEVELOPMENT.md</strong> (Best practices)<br>
+        2️⃣ Tham khảo: <strong>README.md</strong> (API docs)<br>
+        3️⃣ Phát triển: File trong <strong>js/</strong> và <strong>pages/</strong><br>
+        <br>
+        
+        <strong>DevOps/Admin?</strong><br>
+        1️⃣ Đọc: <strong>DEPLOYMENT.md</strong><br>
+        2️⃣ Thiết lập: <strong>SUPABASE_SETUP.md</strong><br>
+        3️⃣ Monitor: Supabase Dashboard<br>
+        <br>
+        
+        <strong>Muốn nâng cấp?</strong><br>
+        1️⃣ Xem: <strong>CHANGELOG.md</strong> (Version history)<br>
+        2️⃣ Plan: <strong>PROJECT_SUMMARY.md</strong> (Roadmap)<br>
+        3️⃣ Code: <strong>DEVELOPMENT.md</strong> (Best practices)
+      </div>
+
+      <!-- Quick Stats -->
+      <h2 class="section-title">📊 Thống kê nhanh</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px;">
+        <div style="background: white; padding: 20px; border-radius: 13px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+          <div style="font-size: 32px; color: #1ba969; font-weight: 700;">6</div>
+          <div style="font-size: 12px; color: #666;">HTML Pages</div>
+        </div>
+        <div style="background: white; padding: 20px; border-radius: 13px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+          <div style="font-size: 32px; color: #1ba969; font-weight: 700;">7</div>
+          <div style="font-size: 12px; color: #666;">JS Modules</div>
+        </div>
+        <div style="background: white; padding: 20px; border-radius: 13px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+          <div style="font-size: 32px; color: #1ba969; font-weight: 700;">5</div>
+          <div style="font-size: 12px; color: #666;">DB Tables</div>
+        </div>
+        <div style="background: white; padding: 20px; border-radius: 13px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+          <div style="font-size: 32px; color: #1ba969; font-weight: 700;">7</div>
+          <div style="font-size: 12px; color: #666;">Doc Files</div>
+        </div>
+        <div style="background: white; padding: 20px; border-radius: 13px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+          <div style="font-size: 32px; color: #1ba969; font-weight: 700;">15+</div>
+          <div style="font-size: 12px; color: #666;">Features</div>
+        </div>
+        <div style="background: white; padding: 20px; border-radius: 13px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+          <div style="font-size: 32px; color: #1ba969; font-weight: 700;">3000+</div>
+          <div style="font-size: 12px; color: #666;">Lines of Code</div>
+        </div>
+      </div>
+
+      <!-- Call to Action -->
+      <div style="text-align: center; margin: 60px 0 40px 0;">
+        <h2 style="font-size: 28px; color: #333; margin-bottom: 20px;">Sẵn sàng bắt đầu?</h2>
+        <a href="QUICKSTART.html" class="start-button">⚡ 8-Bước Quick Start</a>
+        <p style="color: #666; margin-top: 15px; font-size: 14px;">Hoặc <a href="index.html" style="color: #1ba969; text-decoration: none; font-weight: 600;">chơi ứng dụng ngay →</a></p>
+      </div>
+
+      <!-- Footer -->
+      <div class="footer">
+        <p>LimoGo © 2024 • <a href="README.md">Tài liệu</a> • <a href="SUPABASE_SETUP.md">Setup</a> • <a href="DEPLOYMENT.md">Deploy</a></p>
+        <p style="margin-top: 10px;">Made with ❤️ for Green Transportation 🌱</p>
+        <p style="margin-top: 5px; color: #ccc;">v2.0.0 • Production Ready • MIT License</p>
+      </div>
+    </div>
+  </body>
+</html>
