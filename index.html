@@ -21,7 +21,7 @@
       </nav>
       <div class="header-actions">
         <button class="icon-button" aria-label="Thông báo">♧<i></i></button>
-        <button class="profile-button" id="accountButton"><span class="avatar" id="accountAvatar">↗</span><span class="profile-name" id="accountName">Đăng nhập</span><b>⌄</b></button>
+        <a class="profile-button" href="pages/auth.html" id="accountButton"><span class="avatar" id="accountAvatar">↗</span><span class="profile-name" id="accountName">Đăng nhập</span><b>⌄</b></a>
       </div>
     </header>
 
@@ -55,6 +55,54 @@
         </div>
       </section>
 
+      <section class="trust-strip" aria-label="Các lợi ích nổi bật">
+        <div class="trust-item"><span>✓</span> Đặt xe trong 30 giây</div>
+        <div class="trust-item"><span>⚡</span> Tài xế phản hồi nhanh</div>
+        <div class="trust-item"><span>♻️</span> 100% xe điện, ít khói bụi</div>
+        <div class="trust-item"><span>💬</span> Hỗ trợ 24/7</div>
+      </section>
+
+      <section class="feature-showcase" aria-label="Tại sao chọn LimoGo">
+        <div class="section-heading compact-heading">
+          <div>
+            <span class="mini-label">TẠI SAO CHỌN LIMOGO</span>
+            <h2>Trải nghiệm di chuyển bền vững, tiện lợi và tin cậy</h2>
+          </div>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-box">
+            <div class="feature-icon">⚡</div>
+            <h3>Đặt nhanh</h3>
+            <p>Chỉ cần nhập điểm đón và điểm đến, hệ thống sẽ đưa ra giá trực tiếp trong vài giây.</p>
+          </article>
+          <article class="feature-box">
+            <div class="feature-icon">🛡️</div>
+            <h3>An toàn</h3>
+            <p>Giám sát chuyến đi, xác minh tài xế và theo dõi tiến độ bằng bản đồ thời gian thực.</p>
+          </article>
+          <article class="feature-box">
+            <div class="feature-icon">🌿</div>
+            <h3>Vì môi trường</h3>
+            <p>Chúng tôi ưu tiên xe điện, giúp giảm khí thải và tạo cho thành phố một cuộc sống xanh hơn.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="route-showcase">
+        <div class="route-head">
+          <div>
+            <span class="mini-label">TUYẾN PHỔ BIẾN</span>
+            <h2>Chuyến đi thường gặp</h2>
+          </div>
+        </div>
+        <div class="destination-list">
+          <button class="destination-chip" data-place="Sân bay Tân Sơn Nhất">✈ Sân bay Tân Sơn Nhất</button>
+          <button class="destination-chip" data-place="Landmark 81">🏙 Landmark 81</button>
+          <button class="destination-chip" data-place="Phố đi bộ Nguyễn Huệ">🛍 Phố đi bộ Nguyễn Huệ</button>
+          <button class="destination-chip" data-place="Hồ Con Rùa">🌿 Hồ Con Rùa</button>
+        </div>
+      </section>
+
       <section class="map-section" id="liveMapSection">
         <div class="map-copy"><span class="mini-label">BẢN ĐỒ TRỰC TIẾP</span><h2>Ước tính giá trước khi đi</h2><p>Chọn điểm đến để xem tuyến đường, quãng đường và giá dự kiến minh bạch.</p><div class="fare-pills"><span>♧ Không phí ẩn</span><span>ϟ Xe điện xanh</span><span>◷ Cập nhật tức thì</span></div></div>
         <div class="map-card"><div id="liveMap"></div><div class="map-status" id="mapStatus">Nhập điểm đến để tính giá tự động</div><div class="map-fare" id="mapFare"><span>Khoảng cách</span><strong>-- km</strong><span>Giá dự kiến</span><strong>-- đ</strong></div></div>
@@ -83,8 +131,30 @@
         <div class="promo-banner"><div><span class="mini-label">ƯU ĐÃI HÔM NAY</span><h2>Chào mừng bạn đến với LimoGo</h2><p>Giảm 30% cho 3 chuyến đầu tiên, tối đa 30.000đ/chuyến.</p><button>Nhận ưu đãi <span>→</span></button></div><div class="promo-shape"><span>30<small>%</small></span></div></div>
         <div class="recent-card"><div class="recent-heading"><h3>Chuyến gần đây</h3><a href="#">Xem lịch sử</a></div><div class="trip"><div class="trip-icon">⌁</div><div><strong>Hồ Con Rùa</strong><small>Hôm nay, 09:42 · Xe điện tiêu chuẩn</small></div><b>45.000đ</b></div><div class="trip"><div class="trip-icon">⌁</div><div><strong>Landmark 81</strong><small>Hôm qua, 18:20 · Xe máy điện</small></div><b>22.000đ</b></div></div>
       </section>
+
+      <section class="faq-section" id="support">
+        <div class="section-heading"><div><span class="mini-label">CÂU HỎI THƯỜNG GẶP</span><h2>Những điều khách hàng thường hỏi</h2></div></div>
+        <div class="faq-list">
+          <div class="faq-item open">
+            <button type="button">LimoGo tính giá như thế nào?<span>⌄</span></button>
+            <div class="faq-answer">Giá cước dựa trên khoảng cách, loại xe và thời điểm đặt chuyến. Bạn sẽ thấy giá ước tính minh bạch trước khi xác nhận.</div>
+          </div>
+          <div class="faq-item">
+            <button type="button">Có thể đặt xe cho ngày mai không?<span>⌄</span></button>
+            <div class="faq-answer">Có, bạn có thể chọn tính năng đặt lịch để sắp xếp chuyến đi trước, phù hợp cho các hành trình định kỳ hoặc đi sân bay.</div>
+          </div>
+          <div class="faq-item">
+            <button type="button">Tôi có thể thanh toán bằng ví điện tử không?<span>⌄</span></button>
+            <div class="faq-answer">Bạn có thể thanh toán bằng ví LimoGo, thẻ ngân hàng, MoMo hoặc tiền mặt tuỳ theo lựa chọn trong modal xác nhận chuyến.</div>
+          </div>
+          <div class="faq-item">
+            <button type="button">Nếu hủy chuyến thì sao?<span>⌄</span></button>
+            <div class="faq-answer">Bạn có thể hủy chuyến từ giao diện theo dõi, và hệ thống sẽ hiển thị thông báo rõ ràng cùng hướng dẫn xử lý phù hợp.</div>
+          </div>
+        </div>
+      </section>
     </main>
-    <footer id="support"><span>© 2024 LimoGo</span><span>Đi xanh cùng nhau, mỗi ngày.</span><span><a href="#">Điều khoản</a> · <a href="#">Bảo mật</a></span></footer>
+    <footer id="supportFooter"><span>© 2024 LimoGo</span><span>Đi xanh cùng nhau, mỗi ngày.</span><span><a href="#">Điều khoản</a> · <a href="#">Bảo mật</a></span></footer>
 
     <div class="modal-backdrop" id="rideModal" aria-hidden="true"><div class="modal"><button class="close-modal" id="closeModal">×</button><div class="modal-icon">ϟ</div><span class="mini-label">TÌM THẤY CHUYẾN XE</span><h2>Chọn xe cho hành trình của bạn</h2><div class="route-summary"><span class="route-dot pickup"></span><span id="summaryPickup">Vị trí hiện tại</span><span>→</span><span class="route-dot destination"></span><span id="summaryDestination"></span><b id="summaryDistance"></b></div><div class="vehicle-options"><div class="vehicle-option chosen" data-base="12000" data-km="13500"><span class="vehicle-emoji">🚙</span><div><strong>Xe điện tiêu chuẩn</strong><small>3 phút · 4 chỗ ngồi</small></div><b>45.000đ</b><span class="check">✓</span></div><div class="vehicle-option" data-base="18000" data-km="15500"><span class="vehicle-emoji">🚘</span><div><strong>Xe điện cao cấp</strong><small>4 phút · 4 chỗ ngồi · Ưu tiên</small></div><b>55.000đ</b></div><div class="vehicle-option" data-base="24000" data-km="19000"><span class="vehicle-emoji">🚐</span><div><strong>Xe điện 7 chỗ</strong><small>6 phút · 6 chỗ ngồi</small></div><b>68.000đ</b></div></div><div class="promo-code"><input id="promoCode" placeholder="Nhập mã ưu đãi (ví dụ: XANH30)" /><button id="applyPromo">Áp dụng</button></div><div class="payment-methods"><span class="payment-label">THANH TOÁN</span><div class="payment-grid"><button class="payment-option selected" data-payment="cash"><span>₫</span><strong>Tiền mặt</strong><small>Thanh toán sau chuyến</small></button><button class="payment-option" data-payment="wallet"><span>◈</span><strong>Ví LimoGo</strong><small>Số dư 250.000đ</small></button><button class="payment-option" data-payment="card"><span>▣</span><strong>Thẻ ngân hàng</strong><small>Visa •••• 4242</small></button><button class="payment-option" data-payment="momo"><span>m</span><strong>MoMo</strong><small>Liên kết ví</small></button></div></div><div class="fare-total"><span>Tạm tính</span><b id="fareSubtotal">45.000đ</b><span>Giảm giá</span><b class="discount" id="fareDiscount">-0đ</b><strong>Tổng thanh toán</strong><strong id="fareTotal">45.000đ</strong></div><button class="confirm-button" id="confirmRide">Xác nhận đặt xe <span>→</span></button></div></div>
     <div class="modal-backdrop" id="receiptModal" aria-hidden="true"><div class="modal receipt-modal"><button class="close-modal" id="closeReceipt">×</button><div class="success-icon">✓</div><span class="mini-label">ĐẶT XE THÀNH CÔNG</span><h2>Hóa đơn chuyến đi</h2><div class="receipt-id">Mã chuyến <b id="receiptId">LMG-20240923</b></div><div class="receipt-lines"><div><span>Hành trình</span><b id="receiptRoute">Vị trí hiện tại → Landmark 81</b></div><div><span>Loại xe</span><b id="receiptVehicle">Xe điện tiêu chuẩn</b></div><div><span>Thanh toán</span><b id="receiptPayment">Tiền mặt</b></div><div><span>Tổng cộng</span><strong id="receiptTotal">45.000đ</strong></div></div><button class="confirm-button" id="receiptDone">Theo dõi chuyến xe <span>→</span></button><button class="receipt-download" id="downloadReceipt">Tải hóa đơn</button></div></div>
@@ -94,7 +164,7 @@
     <div class="modal-backdrop" id="trackingModal" aria-hidden="true"><div class="tracking-modal"><button class="close-modal" id="closeTracking">×</button><div class="tracking-head"><div class="driver-avatar">🚙</div><div><span class="mini-label">CHUYẾN ĐANG DI CHUYỂN</span><h2 id="trackingTitle">Tài xế đang đến đón bạn</h2><p>Nguyễn Văn Nam · 51H-123.45</p></div></div><div id="trackingMap"></div><div class="tracking-info"><div><span class="live-dot"></span><strong id="trackingStatus">Tài xế đang trên đường đến bạn</strong><small id="trackingEta">Còn khoảng 3 phút</small></div><a id="googleDirections" target="_blank" rel="noopener">Mở Google Maps ↗</a></div><div class="tracking-steps"><div class="done"><i>✓</i><span><strong>Đã tìm thấy tài xế</strong><small>Nguyễn Văn Nam đã nhận chuyến</small></span></div><div class="current"><i>●</i><span><strong>Tài xế đang đến điểm đón</strong><small>Vui lòng chuẩn bị sẵn sàng</small></span></div><div><i>○</i><span><strong>Đã đón bạn</strong><small>Chuyến đi sẽ bắt đầu sau đó</small></span></div></div><div class="tracking-actions"><button class="call-driver" id="callDriver">☎ Gọi</button><button id="chatDriver">▰ Nhắn tin</button><button id="shareTrip">↗ Chia sẻ</button></div><button class="confirm-button cancel-trip" id="cancelTrip">Hủy chuyến</button></div></div>
     <div class="modal-backdrop" id="chatModal" aria-hidden="true"><div class="modal chat-modal"><button class="close-modal" id="closeChat">×</button><div class="modal-icon">▰</div><span class="mini-label">TIN NHẮN VỚI TÀI XẾ</span><h2>Nguyễn Văn Nam</h2><div class="chat-messages"><div class="driver-message">Mình đang đến điểm đón nhé!</div><div class="user-message">Vâng, mình đang đợi ạ.</div></div><div class="chat-input"><input id="chatInput" placeholder="Nhập tin nhắn..." /><button id="sendChat">↑</button></div></div></div>
     <div class="modal-backdrop" id="utilityModal" aria-hidden="true"><div class="modal utility-modal"><button class="close-modal" id="closeUtility">×</button><div class="modal-icon" id="utilityIcon">₫</div><span class="mini-label" id="utilityLabel">LIMOGO</span><h2 id="utilityTitle">Ví LimoGo</h2><div id="utilityContent"></div></div></div>
-    <nav class="mobile-nav" aria-label="Điều hướng ứng dụng"><a class="selected" href="index.html#booking"><span>⌂</span><small>Đặt xe</small></a><a href="#liveMapSection"><span>⌖</span><small>Bản đồ</small></a><a href="#promotions"><span>◇</span><small>Ưu đãi</small></a><a href="pages/account.html"><span>♙</span><small>Tài khoản</small></a></nav>
+    <nav class="mobile-nav" aria-label="Điều hướng ứng dụng"><a class="selected" href="pages/booking.html"><span>⌂</span><small>Đặt xe</small></a><a href="#liveMapSection"><span>⌖</span><small>Bản đồ</small></a><a href="#promotions"><span>◇</span><small>Ưu đãi</small></a><a href="pages/account.html"><span>♙</span><small>Tài khoản</small></a></nav>
     <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
     <script src="js/supabase-config.js"></script>
     <script src="js/supabase-client.js"></script>
@@ -102,6 +172,9 @@
     <script src="js/realtime.js"></script>
     <script src="js/payment.js"></script>
     <script src="js/rating.js"></script>
+    <script src="js/mobile-ui.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/booking.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

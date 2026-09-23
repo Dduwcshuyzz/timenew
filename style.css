@@ -1,14 +1,57 @@
 :root{--green:#0b6957;--green-dark:#074d42;--mint:#dff5e9;--ink:#19312e;--muted:#71817d;--line:#e5ece9;--cream:#f7fbf9}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:"Be Vietnam Pro",sans-serif;font-size:14px}.topbar{height:76px;display:flex;align-items:center;justify-content:space-between;padding:0 7.5%;background:#fff;border-bottom:1px solid #edf2f0;position:sticky;top:0;z-index:5}.brand{display:flex;align-items:center;gap:9px;text-decoration:none;color:var(--green-dark);font-size:23px;font-weight:800;letter-spacing:-1px}.brand span span{color:#38a972}.brand-mark{height:31px;width:31px;border-radius:10px;background:var(--green);color:#fff;display:grid;place-items:center;font-size:19px;font-weight:800;transform:rotate(-8deg)}.nav-links{display:flex;gap:36px;margin-left:120px}.nav-links a{color:#788985;text-decoration:none;font-weight:600}.nav-links a.active,.nav-links a:hover{color:var(--green)}.header-actions{display:flex;gap:22px;align-items:center}.icon-button,.profile-button{border:0;background:transparent;color:#52645f;cursor:pointer}.icon-button{font-size:24px;position:relative}.icon-button i{position:absolute;width:6px;height:6px;background:#eb7659;border-radius:50%;top:1px;right:0}.profile-button{display:flex;align-items:center;gap:9px;font-family:inherit;font-weight:600}.avatar{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:#f7d7c9;color:#9b5e49;font-size:11px}.hero{padding:74px 7.5% 82px;display:flex;justify-content:space-between;align-items:center;gap:80px;background:linear-gradient(115deg,#edf9f3 0%,#f7fbf9 58%,#eff9f1 100%)}.hero-copy{max-width:535px}.eyebrow,.mini-label{color:#399d72;font-size:10px;font-weight:800;letter-spacing:1.4px}.pulse{display:inline-block;width:8px;height:8px;background:#48bb7d;border-radius:50%;margin-right:5px}.hero h1{font-size:52px;line-height:1.13;letter-spacing:-2.4px;margin:17px 0 20px;color:#143f37}.hero h1 em{font-style:normal;color:var(--green)}.hero-copy>p{font-size:16px;line-height:1.8;max-width:450px;color:#647671;margin:0}.hero-stats{display:flex;gap:38px;margin-top:42px}.hero-stats div{display:flex;flex-direction:column;gap:5px}.hero-stats strong{font-size:20px;color:var(--green-dark)}.hero-stats strong span{color:#f1a648;font-size:15px;margin-left:3px}.hero-stats small{font-size:10px;color:#84938f}.booking-card{background:#fff;width:430px;padding:27px;border-radius:20px;box-shadow:0 18px 50px #145d4b12}.card-heading{display:flex;justify-content:space-between;align-items:start}.card-heading h2{font-size:22px;margin:7px 0 21px;letter-spacing:-.6px}.round-help{border:1px solid var(--line);color:#84948f;background:#fff;border-radius:50%;width:27px;height:27px}.ride-tabs{display:flex;background:#f3f8f5;border-radius:10px;padding:4px;margin-bottom:22px}.ride-tab{flex:1;border:0;background:transparent;border-radius:7px;padding:9px;color:#86938f;font:600 11px "Be Vietnam Pro";cursor:pointer}.ride-tab.selected{background:#fff;color:var(--green);box-shadow:0 2px 8px #183b3010}.route-fields{border:1px solid var(--line);border-radius:11px;padding:16px 14px 13px}.route-line{display:flex;gap:11px;align-items:center}.route-dot{height:9px;width:9px;min-width:9px;border-radius:50%;display:inline-block}.pickup{background:#40af7b;box-shadow:0 0 0 4px #e2f5eb}.destination{background:#ed8b6c;box-shadow:0 0 0 4px #ffebe4}.field{display:flex;flex-direction:column;gap:4px;flex:1}.field label{font-size:8px;font-weight:800;letter-spacing:1px;color:#98a5a1}.field input{border:0;outline:0;padding:0;font:500 12px "Be Vietnam Pro";color:#3b504b;background:transparent;width:100%}.field input::placeholder{color:#9ba7a3}.locate{border:0;background:#ecf8f1;color:#299564;border-radius:7px;font-size:20px;width:31px;height:31px}.route-connector{height:20px;border-left:1px dashed #bbcac4;margin-left:4px}.saved-row{display:flex;justify-content:space-between;padding:14px 2px 19px}.saved-row button{border:0;background:transparent;color:#4c7e6c;font:500 10px "Be Vietnam Pro";cursor:pointer}.search-button,.confirm-button{width:100%;border:0;background:var(--green);color:#fff;border-radius:10px;padding:14px;font:700 13px "Be Vietnam Pro";cursor:pointer;transition:.2s}.search-button:hover,.confirm-button:hover{background:var(--green-dark);transform:translateY(-1px)}.search-button span,.confirm-button span{float:right;font-size:18px;line-height:12px}.safe-note{text-align:center;color:#93a09c;font-size:9px;margin-top:14px}.safe-note:first-letter{color:#45aa79}.content-section{padding:65px 7.5% 0}.section-heading,.recent-heading{display:flex;justify-content:space-between;align-items:end;margin-bottom:28px}.section-heading h2{font-size:25px;letter-spacing:-1px;margin:8px 0 0}.section-heading a,.recent-heading a{color:#399d72;text-decoration:none;font-size:11px;font-weight:700}.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.service-card{background:#fff;border-radius:16px;padding:22px;min-height:155px;position:relative;overflow:hidden}.service-card h3{margin:21px 0 7px;font-size:14px}.service-card p{font-size:11px;color:#82908c;max-width:180px;line-height:1.6;margin:0 0 13px}.service-card b{font-size:11px;color:var(--green)}.service-icon{position:absolute;top:20px;left:22px;width:32px;height:32px;border-radius:10px;display:grid;place-items:center;font-size:19px}.electric{background:#def5e9;color:#35a470}.bike{background:#fff0db;color:#d69639}.group{background:#e8e8fb;color:#6f72bb}.service-visual{position:absolute;right:-2px;bottom:-8px;font-size:62px;filter:saturate(.7);opacity:.78;transform:scaleX(-1)}.bike-visual{font-size:52px}.lower-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:20px;padding-bottom:75px}.promo-banner{background:var(--green);border-radius:18px;min-height:190px;padding:29px 32px;position:relative;overflow:hidden;color:#fff}.promo-banner .mini-label{color:#a4e6bf}.promo-banner h2{font-size:20px;margin:12px 0 7px;max-width:340px}.promo-banner p{font-size:11px;color:#b9ddd0;margin:0}.promo-banner button{margin-top:20px;border:0;background:#fff;color:var(--green);border-radius:7px;padding:9px 14px;font:700 10px "Be Vietnam Pro"}.promo-banner button span{margin-left:15px}.promo-shape{position:absolute;right:25px;bottom:-45px;height:180px;width:180px;background:#2e9473;border-radius:50%;display:grid;place-items:center}.promo-shape span{font-size:55px;font-weight:800;transform:rotate(-15deg)}.promo-shape small{font-size:22px}.recent-card{background:#fff;border-radius:18px;padding:24px}.recent-heading{margin-bottom:10px}.recent-heading h3{font-size:15px;margin:0}.trip{display:flex;align-items:center;gap:12px;padding:15px 0;border-bottom:1px solid #eef2f0}.trip:last-child{border:0}.trip-icon{display:grid;place-items:center;background:#e2f5eb;color:#36a874;width:31px;height:31px;border-radius:9px}.trip div:nth-child(2){display:flex;flex-direction:column;gap:3px;flex:1}.trip strong{font-size:11px}.trip small{font-size:9px;color:#98a39f}.trip>b{font-size:11px}.modal-backdrop{position:fixed;inset:0;background:#133b3490;z-index:10;display:none;place-items:center;padding:20px}.modal-backdrop.show{display:grid}.modal{background:#fff;border-radius:18px;width:min(450px,100%);padding:30px;position:relative;box-shadow:0 25px 80px #001e1a40}.close-modal{position:absolute;right:20px;top:18px;border:0;background:#f2f6f4;border-radius:50%;font-size:19px;width:28px;height:28px;color:#637873;cursor:pointer}.modal-icon{background:#def5e9;color:#2da06e;width:40px;height:40px;border-radius:12px;display:grid;place-items:center;font-size:24px;margin-bottom:16px}.modal h2{font-size:21px;margin:9px 0 18px}.route-summary{background:#f4f8f6;padding:12px;border-radius:8px;display:flex;align-items:center;gap:9px;font-size:10px;color:#60716c;margin-bottom:15px}.vehicle-option{display:flex;align-items:center;gap:12px;border:1px solid var(--line);padding:13px;border-radius:10px;margin:8px 0}.vehicle-option.chosen{border-color:#5dbe91;background:#f3fbf6}.vehicle-emoji{font-size:28px}.vehicle-option div{display:flex;flex-direction:column;gap:3px;flex:1}.vehicle-option strong{font-size:11px}.vehicle-option small{font-size:9px;color:#899792}.vehicle-option>b{font-size:11px}.check{background:#38ab76;color:#fff;border-radius:50%;font-size:10px;padding:3px 5px}.confirm-button{margin-top:18px}footer{border-top:1px solid var(--line);padding:24px 7.5%;display:flex;justify-content:space-between;color:#91a09b;font-size:10px;background:#fff}footer a{color:#71847e;text-decoration:none}.toast{position:fixed;bottom:25px;left:50%;transform:translate(-50%,130px);background:#123f35;color:#fff;padding:14px 20px;border-radius:9px;font-size:12px;box-shadow:0 8px 25px #0002;transition:.3s;z-index:20}.toast.show{transform:translate(-50%,0)}@media(max-width:850px){.topbar{padding:0 5%}.nav-links{margin:0;gap:16px}.hero{padding:50px 5%;gap:35px}.hero h1{font-size:42px}.booking-card{width:390px}.content-section{padding-left:5%;padding-right:5%}}@media(max-width:680px){.nav-links{display:none}.profile-name,.profile-button b{display:none}.hero{display:block;padding-top:42px}.hero-copy{margin-bottom:35px}.hero-stats{gap:18px}.booking-card{width:100%}.service-grid,.lower-grid{grid-template-columns:1fr}.section-heading h2{font-size:20px}.promo-banner{min-height:210px}.promo-shape{right:10px}footer{flex-direction:column;gap:9px}}
 
 /* Mobile app shell */
+body.app-style {
+  background: linear-gradient(180deg, #edf9f5 0%, #f7fbf8 24%, #f2f7f4 100%);
+}
+
+.smart-hero {
+  position: relative;
+  border-radius: 32px;
+  box-shadow: 0 25px 60px rgba(17, 96, 73, 0.08);
+  border: 1px solid rgba(18, 121, 91, 0.08);
+  overflow: hidden;
+}
+
+.phone-card {
+  background: linear-gradient(180deg, #ffffff 0%, #f7fbf8 100%);
+  border-radius: 26px;
+  box-shadow: 0 16px 36px rgba(17, 95, 71, 0.12);
+  border: 1px solid rgba(11, 105, 87, 0.08);
+}
+
+.ride-tab.selected,
+.vehicle-option.chosen,
+.payment-option.selected,
+.destination-chip.active {
+  background: linear-gradient(135deg, #0d6957 0%, #179a69 100%);
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 12px 24px rgba(13, 105, 87, 0.18);
+}
+
+.destination-chip {
+  transition: all 0.2s ease;
+}
+
+.destination-chip.active {
+  transform: translateY(-1px);
+}
+
+.quick-card.lift {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 28px rgba(12, 84, 69, 0.08);
+}
+
 @media(max-width:680px){
   body{background:#f1f5f3;padding-bottom:72px}
   .topbar{height:62px;padding:0 18px;border-bottom:0;box-shadow:0 1px 0 #e9efec}
   .topbar .brand{font-size:20px}.topbar .header-actions{gap:0}.topbar .icon-button{display:none}.topbar .profile-button{font-size:0}.topbar .avatar{font-size:10px;width:32px;height:32px}
-  .hero{padding:0 14px 20px;background:#f5faf7;min-height:0}
+  .hero{padding:0 14px 20px;background:linear-gradient(180deg,#f4faf6 0%,#effaf6 100%);min-height:0;border-radius:0 0 28px 28px}
+  .smart-hero{border-radius:24px}
   .mobile-appbar{display:flex;justify-content:space-between;align-items:center;padding:21px 4px 16px}.mobile-appbar div{display:flex;flex-direction:column;gap:4px}.mobile-appbar strong{font-size:18px;letter-spacing:-.4px}.mobile-appbar .mini-label{font-size:9px}.mobile-bell{border:0;background:#fff;color:var(--green);border-radius:11px;width:37px;height:37px;font-size:20px;box-shadow:0 4px 12px #18523c12;position:relative}.mobile-bell i{position:absolute;width:6px;height:6px;background:#ed8066;border-radius:50%;right:8px;top:7px}
   .hero-copy{display:none}
-  .booking-card{padding:19px 15px 15px;border-radius:18px;box-shadow:0 7px 23px #18523c12}.card-heading h2{font-size:19px;margin:6px 0 16px}.round-help{display:none}.ride-tabs{margin-bottom:17px}.ride-tab{padding:8px 4px}
+  .booking-card{padding:19px 15px 15px;border-radius:22px;box-shadow:0 18px 40px rgba(18, 96, 76, 0.12)}.card-heading h2{font-size:19px;margin:6px 0 16px}.round-help{display:none}.ride-tabs{margin-bottom:17px}.ride-tab{padding:8px 4px}
   .route-fields{padding:14px 12px 11px}.saved-row{padding:12px 1px 14px}.search-button{padding:13px}
   .map-section{display:block;padding:15px 14px 0;background:#fff}.map-copy{padding:8px 4px 15px}.map-copy h2{font-size:21px;margin:7px 0}.map-copy p{font-size:11px;margin:0}.fare-pills{margin-top:14px;gap:5px}.fare-pills span{font-size:8px;padding:6px 8px}.map-card{padding:0;box-shadow:none;border-radius:14px}.map-card #liveMap{height:250px;border-radius:14px}.map-status{left:11px;top:11px;font-size:9px}.map-fare{padding:12px 5px 2px;font-size:9px}
   .content-section{padding:40px 14px 0}.section-heading{margin-bottom:17px}.section-heading h2{font-size:20px}.section-heading a{font-size:10px}.service-grid{gap:10px}.service-card{min-height:132px;padding:17px}.service-icon{top:16px;left:17px}.service-card h3{margin-top:19px;font-size:12px}.service-card p{font-size:10px;margin-bottom:8px}.service-visual{font-size:50px}
@@ -36,3 +79,82 @@
 .modal-backdrop{z-index:1000}
 .modal-backdrop .modal,.modal-backdrop .tracking-modal{position:relative;z-index:1001}
 .tracking-modal{overflow:hidden}
+
+.trust-strip{
+  display:grid;
+  grid-template-columns:repeat(4, minmax(0, 1fr));
+  gap:18px;
+  width:min(1280px, 85%);
+  margin:0 auto -24px;
+  position:relative;
+  z-index:2;
+}
+
+.trust-item{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:14px 12px;
+  color:#355b52;
+  font-size:11px;
+  font-weight:700;
+  box-shadow:0 12px 24px rgba(15, 56, 45, 0.04);
+}
+
+.trust-item span{display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:#ebfaf1;color:var(--green)}
+
+.feature-showcase,
+.route-showcase,
+.faq-section{padding:62px 7.5% 0}
+
+.compact-heading h2{max-width:620px}
+
+.feature-grid{
+  margin-top:24px;
+  display:grid;
+  grid-template-columns:repeat(3, minmax(0, 1fr));
+  gap:20px;
+}
+
+.feature-box{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:20px;
+  padding:26px 22px;
+  box-shadow:0 16px 35px rgba(16, 70, 55, 0.05);
+}
+
+.feature-icon{
+  width:48px;height:48px;border-radius:14px;background:var(--mint);display:grid;place-items:center;font-size:22px;margin-bottom:18px
+}
+
+.feature-box h3{margin:0 0 10px;font-size:18px;letter-spacing:-.5px}
+.feature-box p{margin:0;color:#6f847c;line-height:1.7;font-size:12px}
+
+.route-showcase{padding-top:22px}
+.route-head{margin-bottom:18px}
+.destination-list{display:flex;flex-wrap:wrap;gap:12px}
+.destination-chip{
+  border:1px solid #dfece8;background:#fff;border-radius:999px;padding:12px 16px;cursor:pointer;font:600 11px "Be Vietnam Pro";color:#214c42;transition:.2s
+}
+.destination-chip:hover{transform:translateY(-1px);border-color:#99d3b1;box-shadow:0 10px 16px rgba(20,110,80,.06)}
+
+.faq-section{padding-bottom:48px}
+.faq-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:20px}
+.faq-item{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.faq-item button{
+  width:100%;display:flex;align-items:center;justify-content:space-between;gap:12px;border:0;background:transparent;padding:18px 18px 16px;font:700 12px "Be Vietnam Pro";color:var(--ink);text-align:left;cursor:pointer
+}
+.faq-item .faq-answer{display:none;padding:0 18px 18px;color:#69807c;font-size:11px;line-height:1.8}
+.faq-item.open .faq-answer{display:block}
+.faq-item.open button{color:var(--green)}
+
+@media(max-width:680px){
+  .trust-strip{grid-template-columns:repeat(2,minmax(0,1fr));width:min(92%, 600px);margin-bottom:10px}
+  .feature-grid,.faq-list{grid-template-columns:1fr}
+  .feature-showcase,.route-showcase,.faq-section{padding-left:14px;padding-right:14px}
+}

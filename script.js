@@ -23,6 +23,21 @@ const knownPlaces = {
   "hồ con rùa": [10.7855, 106.6936]
 };
 
+document.querySelectorAll(".destination-chip").forEach((chip) => {
+  chip.addEventListener("click", () => {
+    destination.value = chip.dataset.place;
+    findDestination(chip.dataset.place);
+    document.getElementById("mapStatus").textContent = `Đã chọn tuyến ${chip.dataset.place}`;
+  });
+});
+
+document.querySelectorAll(".faq-item button").forEach((button) => {
+  button.addEventListener("click", () => {
+    const item = button.closest(".faq-item");
+    item.classList.toggle("open");
+  });
+});
+
 const liveMap = window.L ? L.map("liveMap", { zoomControl: false }).setView([10.7769, 106.7009], 12) : null;
 if (liveMap) {
   L.control.zoom({ position: "bottomright" }).addTo(liveMap);
